@@ -10,6 +10,15 @@ bash build.sh -c -r
 -d Clear Build Folder
 ```
 
+### Outputs
+
+```
+bash build.sh -c -r                                                       
+Hello Python
+When Python Meets C++
+Hello C++
+```
+
 ## G++ Compiler
 
 UNIX
