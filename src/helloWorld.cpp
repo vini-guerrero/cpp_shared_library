@@ -1,22 +1,22 @@
 #include <iostream>
 #include <stdio.h>
 
+
 class HelloWorld {
 	public:
-		void classFunction(std::string text = "Hello C++"){
-			std::cout << text << std::endl;
-		}
+		void displayMessage(std::string text = "Hello C++"){ std::cout << text << std::endl; }
+		static void returnMessage(char *buff){ strcat(buff, " Meets C++"); }
 };
 
-extern "C" {
+extern "C" { 
 	HelloWorld* helloWorld(){ return new HelloWorld(); }
-	void helloWorld_classFunction(HelloWorld* helloWorld, char* text){ helloWorld -> classFunction(text); }
-	int sum(int x, int y) { return x + y; }
+	void displayMessage(HelloWorld *helloWorld, char *text){ helloWorld->displayMessage(text); }
+	void returnMessage(char *buff) { HelloWorld::returnMessage(buff); }
 }
 
 int main(){
 	HelloWorld helloWorld;
-	helloWorld.classFunction();
+	helloWorld.displayMessage();
 	return 0;
 }
 

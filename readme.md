@@ -13,7 +13,9 @@ bash build.sh -c -r
 ## G++ Compiler
 
 UNIX
+
 - `g++ -shared -fPIC -Wl,-install_name,helloWorld.so -o helloWorld.so helloWorld.cpp`
 
 Windows
+
 - `g++ -shared -fPIC -Wl,-so_name,helloWorld.so -o helloWorld.so helloWorld.cpp`
